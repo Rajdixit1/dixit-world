@@ -1,0 +1,9 @@
+services:
+  - type: web_static
+    name: dixit-world
+    env: node
+    plan: free
+    buildCommand: npm run build
+    startCommand: npm run preview
+    rootDir: /
+    staticPublishPath: dist
