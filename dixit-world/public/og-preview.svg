@@ -1,0 +1,8 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" rx="0" fill="#fdfdf8"/>
+  <rect x="100" y="100" width="200" height="200" rx="24" fill="#0f172a"/>
+  <path d="M200 200C144.772 200 100 244.772 100 300C100 325.228 116.772 344 142 344H258C283.228 344 300 325.228 300 300C300 274.772 283.228 256 258 256H142C116.772 256 100 274.772 100 300C100 325.228 116.772 344 142 344L258 344C283.228 344 300 325.228 300 300C300 274.772 283.228 256 258 256H142Z" fill="#3b82f6"/>
+  <circle cx="200" cy="300" r="20" fill="#14b8a6"/>
+  <text x="400" y="315" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#0f172a">Dixit World</text>
+  <text x="400" y="380" font-family="system-ui, sans-serif" font-size="24" fill="#334155">Websites · AI · Automation</text>
+</svg>
