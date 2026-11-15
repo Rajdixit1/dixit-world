@@ -1,32 +1,61 @@
-# React + TypeScript + Vite
+# Dixit World
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern web application built with Vite, React, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project was created to demonstrate a beautiful web interface with modern web technologies.
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Vite** - Fast build tool and dev server
+- **React** - UI library
+- **Tailwind CSS** - Styling framework
+- **TypeScript** - Type safety
 
-## Expanding the Oxlint configuration
+## Getting Started
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+### Prerequisites
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+- Node.js >= 18.0.0
+- npm or yarn
+
+### Installation
+
+```bash
+npm install
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+### Development
+
+```bash
+npm run dev
+```
+
+Open `http://localhost:5173` to view the application in your browser.
+
+### Build
+
+```bash
+npm run build
+```
+
+### Preview
+
+```bash
+npm run preview
+```
+
+## Deployment on Render
+
+This project can be deployed on Render.com:
+
+1. Create a new Web Service on Render
+2. Connect your GitHub repository
+3. Set the build command: `npm run build`
+4. Set the start command: `npm run preview`
+5. Deploy!
+
+## License
+
+MIT
