@@ -1,9 +1,13 @@
+# Render deployment configuration for Dixit World
+# This file tells Render how to build and serve your Vite + React project
+
 services:
-  - type: web_static
+  - type: web
     name: dixit-world
     env: node
     plan: free
     buildCommand: npm run build
     startCommand: npm run preview
-    rootDir: /
-    staticPublishPath: dist
+    # rootDir is intentionally omitted - Render uses repo root by default for web services
+    # staticPublishPath ensures we publish the dist/ folder
+```
