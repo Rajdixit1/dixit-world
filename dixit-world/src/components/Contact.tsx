@@ -71,7 +71,7 @@ Project Description: ${formData.description}`;
     const message = buildMessage();
     const whatsAppUrl = `https://wa.me/919905105846?text=${encodeURIComponent(message)}`;
 
-    // Open WhatsApp in a new tab â€” visitor sends it themselves
+    // Open WhatsApp in a new tab — visitor sends it themselves
     window.open(whatsAppUrl, '_blank');
   };
 
@@ -156,7 +156,9 @@ Project Description: ${formData.description}`;
                 automatically. You review and send the message yourself.
               </p>
             </div>
-          </div>          <div className="space-y-6">
+          </div>          
+          
+          <div className="space-y-6">
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-navy-700 mb-1">
@@ -232,13 +234,6 @@ Project Description: ${formData.description}`;
                 type="button"
                 variant="outline"
                 onClick={handleOpenEmail}
-                  const message = `New project enquiry from Dixit World website:
-
-Name: ${formData.name}
-Service Interested: ${formData.service}
-Project Description: ${formData.description}`;
-                  window.location.href = `mailto:sunil7557724933@gmail.com?subject=Project Enquiry from Dixit World Website&body=${encodeURIComponent(message)}`;
-                }}
                 className="w-full py-3"
               >
                 Open Email Draft

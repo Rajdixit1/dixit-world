@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Layout, Code, Bot, GitBranch, Share2, Rocket } from 'lucide-react';
-import { Button } from './Button';
 
 interface Service {
   icon: React.ReactNode;
@@ -57,10 +56,11 @@ const SERVICES: Service[] = [
 
 export function Services() {
   return (
-    <section id="services" className="py-20 lg:py-24 bg-white">
+    <section id="services" className="py-20 lg:py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
         <div className="text-center mb-16">
-          <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold tracking-tight">
+          <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold tracking-tight text-navy-900">
             Technology that works for your business.
           </h2>
           <p className="mt-4 text-lg text-navy-700 max-w-2xl mx-auto">
@@ -73,32 +73,37 @@ export function Services() {
           {SERVICES.map((service) => (
             <div
               key={service.title}
-              className="group relative p-8 rounded-xl border border-slate-200 bg-warm-white hover:border-blue-300/50 hover:shadow-medium transition-all"
+              // flex flex-col h-full add kiya taaki saare cards barabar height ke ho
+              className="group relative flex flex-col h-full p-8 rounded-xl border border-slate-200 bg-white hover:border-blue-300 hover:shadow-lg transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors mb-6">
+              <div className="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors mb-6 shrink-0">
                 {service.icon}
               </div>
+              
               <h3 className="text-lg font-bold text-navy-900 mb-3">
                 {service.title}
               </h3>
-              <p className="text-navy-600 mb-6 leading-relaxed">
+              
+              <p className="text-navy-600 mb-6 leading-relaxed flex-grow">
                 {service.description}
               </p>
-              <div className="flex items-start gap-2 mt-6 pt-6 border-t border-slate-100">
-                <span className="w-1.5 h-1.5 bg-teal-500 rounded-full shrink-0 mt-1" />
+              
+              <div className="flex items-start gap-2 mt-auto pt-6 border-t border-slate-100">
+                <span className="w-1.5 h-1.5 bg-teal-500 rounded-full shrink-0 mt-1.5" />
                 <span className="text-sm font-medium text-navy-800 leading-tight">
                   {service.benefit}
                 </span>
               </div>
-              <Button
-                variant="outline"
-                size="sm"
-                asChild
+
+              {/* Standard <a> tag use kiya hai taaki button kaam kare bina kisi custom prop ke */}
+              <a
                 href={`https://wa.me/919905105846?text=${encodeURIComponent(service.whatsAppMessage)}`}
-                className="mt-6 w-full text-xs md:text-sm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 w-full inline-flex items-center justify-center px-4 py-2.5 border border-slate-300 rounded-lg text-sm font-semibold text-navy-900 bg-white hover:bg-slate-50 hover:text-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               >
                 Discuss this service
-              </Button>
+              </a>
             </div>
           ))}
         </div>
